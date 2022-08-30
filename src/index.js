@@ -6,4 +6,10 @@ import './global.css';
 import { ResultContextProvider } from "./contexts/resultContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<ResultContextProvider><Router><App /></Router></ResultContextProvider>);
+root.render(
+	<ResultContextProvider>
+		<Router>
+			<App />
+		</Router>
+	</ResultContextProvider>
+);

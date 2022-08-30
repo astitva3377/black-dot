@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import { useResultContext } from '../contexts/resultContextProvider';
-import { Loading } from './loading'
+import { Loading } from './loading';
 
 export const Results = () => {
 	const { results, isLoading, getResults, searchTerm } = useResultContext();
@@ -17,7 +17,6 @@ export const Results = () => {
 	}, [searchTerm, location.pathname]);
   
 	if(isLoading) return <Loading />;
-	console.log(location.pathname);
 	switch(location.pathname) {
 		case '/search':
 			return (
